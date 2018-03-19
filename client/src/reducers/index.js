@@ -24,6 +24,12 @@ function contacts(state = [], action) {
   }
   return state;
 }
+function vehicle(state = [], action){
+  if(action.type === "GET_VEHICLE_DONE") {
+    return action.value
+  }
+  return state;
+}
 
 const rootReducer = combineReducers({
   comments,products,vehicles,contacts
