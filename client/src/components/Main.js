@@ -5,6 +5,7 @@ import VehiclesContainer from "../containers/VehiclesContainer";
 import CommentsContainer from "../containers/CommentsContainer";
 import CreateThingsContainer from "../containers/CreateThingsContainer";
 
+
 function Contacts() {
   return (
     <div>
@@ -17,6 +18,7 @@ function Contacts() {
         <VehiclesContainer />
         <h1>Products</h1>
         <ProductsContainer />
+
       </div>
       <div style={{float: "left", width: "49%"}}>
         <CreateThingsContainer />

@@ -59,19 +59,19 @@ At this point, the web page should operate in the same manner as the redux fetch
 ### Actions
 * Create actions in actions/index.js
 * Create actions to do to a fetch call to one item. When complete, dispatch to the done action.
-    * getProduct(id)
-        * fetch(“/products/“ + id)
     * getVehicle(id)
         * fetch(“/vehicles/“ + id)
+    * getProduct(id)
+        * fetch(“/products/“ + id)
     * getComment(id)
         * fetch(“/comments/“ + id)
     * getContact(id)
         * fetch(“/contacts/“ + id)
 * Create actions to handle the data 
-    * getProductDone(product)
-        * GET_PRODUCT_DONE
     * getVehicleDone(vehicle)
         * GET_VEHICLE_DONE
+    * getProductDone(product)
+        * GET_PRODUCT_DONE
     * getComment(comment)
         * GET_COMMENT_DONE
     * getContact(contact)
