@@ -4,7 +4,7 @@ export function list(request, response) {
   return response.json(contacts);
 }
 export function show(request, response) {
-  return response.json(comments.find(contact => contact._id == request.params.id));
+  return response.json(contacts.find(contact => contact._id == request.params.id));
 }
 export function create(request, response) {
   contacts.push(request.body);

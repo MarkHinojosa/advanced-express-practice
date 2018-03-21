@@ -7,13 +7,14 @@ class Vehicle extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div>
-      <h1>This is the Vehicle Component and this is the vehicle id: {this.props.match.params.vehicleId}</h1>
+      <h1>Make: {this.props.vehicle.make}</h1>
+      <h1>Model: {this.props.vehicle.model}</h1>
+      <h1>Year: {this.props.vehicle.year}</h1>
+      <h1>Price: {this.props.vehicle.price}</h1>      
     </div>
     )
-
   }
 }
 
