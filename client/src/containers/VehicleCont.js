@@ -16,4 +16,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Vehicle);
+export default connect(mapStateToProps, mapDispatchToProps)(Vehicle);

@@ -11,7 +11,7 @@ export function create(request, response) {
   return response.json(contacts);
 }
 export function update(request, response) {
-  return response.json({ theId: request.params.id });
+  return response.json();
 }
 export function remove(request, response) {
   contacts.splice(contacts.indexOf(contacts.find(con => con._id == request.params.id)), 1);

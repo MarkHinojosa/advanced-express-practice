@@ -11,9 +11,9 @@ export function create(request, response) {
   return response.json(vehicles);
 }
 export function update(request, response) {
-  return response.json(vehicles);
+  return response.json();
 }
 export function remove(request, response) {
-  products.splice(vehicles.indexOf(vehicles.find(veh => veh._id == request.params.id)), 1);  
+  products.splice(vehicles.indexOf(vehicles.find(veh => veh._id == request.params.id)), 1);
   return response.json(vehicles);
 }

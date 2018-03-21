@@ -11,7 +11,7 @@ export function create(request, response) {
   return response.json(products);
 }
 export function update(request, response) {
-  return response.json({ theId: request.params.id });
+  return response.json();
 }
 export function remove(request, response) {
   products.splice(products.indexOf(products.find(prod => prod._id == request.params.id)), 1);

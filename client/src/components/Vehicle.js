@@ -9,11 +9,11 @@ class Vehicle extends React.Component {
   render() {
     return (
       <div>
-      <h1>Make: {this.props.vehicle.make}</h1>
-      <h1>Model: {this.props.vehicle.model}</h1>
-      <h1>Year: {this.props.vehicle.year}</h1>
-      <h1>Price: {this.props.vehicle.price}</h1>      
-    </div>
+        <h1>Make: {this.props.vehicle.make}</h1>
+        <h1>Model: {this.props.vehicle.model}</h1>
+        <h1>Year: {this.props.vehicle.year}</h1>
+        <h1>Price: {this.props.vehicle.price}</h1>
+      </div>
     )
   }
 }

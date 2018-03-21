@@ -11,7 +11,7 @@ export function create(request, response) {
   return response.json(comments);
 }
 export function update(request, response) {
-  return response.json({ theId: request.params.id });
+  return response.json();
 }
 export function remove(request, response) {
   comments.splice(comments.indexOf(comments.find(com => com._id == request.params.id)), 1);
