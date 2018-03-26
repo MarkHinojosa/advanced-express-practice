@@ -1,10 +1,16 @@
-import products from "../products";
+import Products from "../models/ProductsModel.js";
 
 export function list(request, response) {
-  return response.json(products);
+
+  Products.find({}).exec().then(prod => {
+    return response.json(prod);
+  })
+
 }
 export function show(request, response) {
-  return response.json(products.find(prod => prod._id == request.params.id));
+  Products.findById(request.params.id).exec().then(prod => {
+    return response.json(prod);
+  })
 }
 export function create(request, response) {
   products.push(request.body);

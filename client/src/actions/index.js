@@ -116,7 +116,6 @@ export function getVehicleDone(vehicle) {
 }
 
 export function getProduct(id) {
-  console.log("this is geproductid:" + id)
   return function (dispatch) {
     fetch("/products/" + id).then((response) => {
       return response.json();

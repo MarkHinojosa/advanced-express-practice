@@ -3,6 +3,7 @@ import Contact from "../components/Contact";
 import { getContact } from '../actions';
 
 function mapStateToProps(state) {
+  console.log(state)
   return {
     contact: state.contact
   };

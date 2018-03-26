@@ -7,9 +7,10 @@ class Comment extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <div>
-        <h1>Comment Body: {this.props.Comment.body}</h1>
+        <h1>Comment Body: {this.props.comment.body}</h1>
       </div>
     )
   }

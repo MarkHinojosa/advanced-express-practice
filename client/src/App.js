@@ -26,7 +26,6 @@ class App extends Component {
     this.props.loadProducts();
   }
   render() {
-    console.log(this.props)
     return (
       <BrowserRouter>
         <div>

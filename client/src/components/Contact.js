@@ -7,6 +7,7 @@ class Contact extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <div>
         <h1>Name: {this.props.contact.name}</h1>

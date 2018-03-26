@@ -1,10 +1,14 @@
-import vehicles from "../vehicles.js";
+import Vehicles from "../models/VehiclesModels.js";
 
 export function list(request, response) {
-  return response.json(vehicles);
+  Vehicles.find({}).exec().then(cont => {
+    return response.json(cont);
+  })
 }
 export function show(request, response) {
-  return response.json(vehicles.find(veh => veh._id == request.params.id));
+  Vehicles.findById(request.params.id).exec().then(veh => {
+    return response.json(veh);
+  })
 }
 export function create(request, response) {
   vehicles.push(request.body);

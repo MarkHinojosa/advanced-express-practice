@@ -1,10 +1,14 @@
-import comments from "../comments.js";
+import Comments from "../models/CommentModel.js";
 
 export function list(request, response) {
-  return response.json(comments);
+  Comments.find({}).exec().then(cont => {
+    return response.json(cont);
+  })
 }
 export function show(request, response) {
-  return response.json(comments.find(comment => comment._id == request.params.id));
+  Comments.findById(request.params.id).exec().then(com => {
+    return response.json(com);
+  })
 }
 export function create(request, response) {
   comments.push(request.body);

@@ -1,10 +1,15 @@
-import contacts from "../contacts";
+import Contact from "../models/ContactModel.js";
 
 export function list(request, response) {
-  return response.json(contacts);
+
+  Contact.find({}).exec().then(cont => {
+    return response.json(cont);
+  })
 }
 export function show(request, response) {
-  return response.json(contacts.find(contact => contact._id == request.params.id));
+  Contact.findById(request.params.id).exec().then(contact => {
+    return response.json(contact);
+  })
 }
 export function create(request, response) {
   contacts.push(request.body);

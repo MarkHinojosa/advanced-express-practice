@@ -4,7 +4,7 @@ import { getComment } from '../actions';
 
 function mapStateToProps(state) {
   return {
-    Comment: state.comment
+    comment: state.comment
   };
 }
 

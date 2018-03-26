@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import { list, show, create, update, remove } from "../controllers/ContactsController";
+import { list, show, create, update, remove } from "../controllers/ContactController";
 
 router.get("/contacts", list);
 router.get("/contacts/:id", show);

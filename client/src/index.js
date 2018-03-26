@@ -4,8 +4,11 @@ import AppContainer from "./AppContainer";
 import "./index.css";
 import store from "./store";
 import { Provider } from "react-redux";
+// import mongoose from "mongoose";
+
 
 ReactDOM.render(
   <Provider store={store}><AppContainer /></Provider>,
   document.getElementById("root")
 );
+
