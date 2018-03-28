@@ -1,19 +1,25 @@
-import Comments from "../models/CommentModel.js";
+import Comment from "../models/CommentModel.js";
 
 export function list(request, response) {
-  Comments.find({}).exec().then(cont => {
+  Comment.find({}).exec().then(cont => {
     return response.json(cont);
   })
 }
 export function show(request, response) {
-  Comments.findById(request.params.id).exec().then(com => {
+  Comment.findById(request.params.id).exec().then(com => {
     return response.json(com);
   })
 }
 export function create(request, response) {
-  comments.push(request.body);
-  return response.json(comments);
+  const comment = new Comment({
+    body: request.body.body
+  });
+
+  comment.save().then(comm => {
+    return response.json(comm);
+  });
 }
+
 export function update(request, response) {
   return response.json();
 }

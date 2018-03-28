@@ -75,7 +75,7 @@ At this point, the web page should operate in the same manner as the redux fetch
     * getComment(comment)
         * GET_COMMENT_DONE
     * getContact(contact)
-        * GET_CONTACT_DONE
+        * GET_CONTACT_DONE  
 
 
 ### Components

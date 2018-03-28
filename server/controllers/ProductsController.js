@@ -1,20 +1,26 @@
-import Products from "../models/ProductsModel.js";
+import Product from "../models/ProductsModel.js";
 
 export function list(request, response) {
 
-  Products.find({}).exec().then(prod => {
+  Product.find({}).exec().then(prod => {
     return response.json(prod);
   })
 
 }
 export function show(request, response) {
-  Products.findById(request.params.id).exec().then(prod => {
+  Product.findById(request.params.id).exec().then(prod => {
     return response.json(prod);
   })
 }
 export function create(request, response) {
-  products.push(request.body);
-  return response.json(products);
+  const product = new Product({
+    name: request.body.name,
+    description: request.body.description
+  });
+
+  product.save().then(prod => {
+    return response.json(prod);
+  })
 }
 export function update(request, response) {
   return response.json();
