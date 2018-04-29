@@ -101,7 +101,6 @@ export function createComment(v) {
 }
 
 export function getVehicle(id) {
-  console.log(id)
   return function (dispatch) {
     fetch("/vehicles/" + id).then((response) => {
       return response.json();
@@ -117,8 +116,7 @@ export function getVehicleDone(vehicle) {
 }
 
 export function getProduct(id) {
-  console.log("this is geproductid:" + id)
-  return function(dispatch){
+  return function (dispatch) {
     fetch("/products/" + id).then((response) => {
       return response.json();
     }).then(prod => dispatch(getProductDone(prod)));
@@ -133,9 +131,8 @@ export function getProductDone(product) {
 }
 
 export function getComment(id) {
-  console.log(id)
-  return function(dispatch) {
-    fetch("/comments/" + id). then((response) => {
+  return function (dispatch) {
+    fetch("/comments/" + id).then((response) => {
       return response.json();
     }).then(com => dispatch(getCommentDone(com)));
   }
@@ -149,8 +146,8 @@ export function getCommentDone(comment) {
 }
 
 export function getContact(id) {
-  return function(dispatch) {
-    fetch("/contacts/" + id). then((response) => {
+  return function (dispatch) {
+    fetch("/contacts/" + id).then((response) => {
       return response.json();
     }).then(con => dispatch(getContactDone(con)));
   }

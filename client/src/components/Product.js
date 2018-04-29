@@ -9,9 +9,9 @@ class Product extends React.Component {
   render() {
     return (
       <div>
-      <h1>Product Name: {this.props.product.name}</h1>
-      <h1>Product Description: {this.props.product.description}</h1>  
-    </div>
+        <h1>Product Name: {this.props.product.name}</h1>
+        <h1>Product Description: {this.props.product.description}</h1>
+      </div>
     )
   }
 }

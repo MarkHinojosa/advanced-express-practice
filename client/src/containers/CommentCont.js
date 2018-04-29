@@ -4,7 +4,7 @@ import { getComment } from '../actions';
 
 function mapStateToProps(state) {
   return {
-    Comment: state.comment
+    comment: state.comment
   };
 }
 
@@ -16,4 +16,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Comment);
+export default connect(mapStateToProps, mapDispatchToProps)(Comment);

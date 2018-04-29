@@ -26,20 +26,18 @@ class App extends Component {
     this.props.loadProducts();
   }
   render() {
-    console.log(this.props)
     return (
       <BrowserRouter>
         <div>
           <Switch>
             <Route path="/product/:productId" component={ProductCont} />
             <Route path="/vehicle/:vehicleId" component={VehicleCont} />
-            <Route path="/comment/:commentId" component={CommentCont} />  
-            <Route path="/contact/:contactId" component={ContactCont} />                                  
+            <Route path="/comment/:commentId" component={CommentCont} />
+            <Route path="/contact/:contactId" component={ContactCont} />
             <Route path="/" component={Main} />
           </Switch>
         </div>
       </BrowserRouter>
-
     );
   }
 }

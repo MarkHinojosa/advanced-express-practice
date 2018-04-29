@@ -3,6 +3,7 @@ import Contact from "../components/Contact";
 import { getContact } from '../actions';
 
 function mapStateToProps(state) {
+  console.log(state)
   return {
     contact: state.contact
   };
@@ -16,4 +17,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Contact);
+export default connect(mapStateToProps, mapDispatchToProps)(Contact);

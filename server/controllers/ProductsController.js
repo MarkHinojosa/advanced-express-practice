@@ -1,17 +1,29 @@
-import products from "../products";
+import Product from "../models/ProductsModel.js";
 
 export function list(request, response) {
-  return response.json(products);
+
+  Product.find({}).exec().then(prod => {
+    return response.json(prod);
+  })
+
 }
 export function show(request, response) {
-  return response.json(products.find(prod => prod._id == request.params.id));
+  Product.findById(request.params.id).exec().then(prod => {
+    return response.json(prod);
+  })
 }
 export function create(request, response) {
-  products.push(request.body);
-  return response.json(products);
+  const product = new Product({
+    name: request.body.name,
+    description: request.body.description
+  });
+
+  product.save().then(prod => {
+    return response.json(prod);
+  })
 }
 export function update(request, response) {
-  return response.json({ theId: request.params.id });
+  return response.json();
 }
 export function remove(request, response) {
   products.splice(products.indexOf(products.find(prod => prod._id == request.params.id)), 1);

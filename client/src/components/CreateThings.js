@@ -36,9 +36,9 @@ class CreateThings extends React.Component {
           }}>
             <div>
               Body: <input onChange={(e) => {
-                const comment = {body: e.target.value};
+                const comment = { body: e.target.value };
                 this.setState({
-                  comment: Object.assign(this.state.comment,comment)
+                  comment: Object.assign(this.state.comment, comment)
                 });
               }} />
             </div>
@@ -55,25 +55,25 @@ class CreateThings extends React.Component {
           }}>
             <div>
               Name: <input onChange={(e) => {
-                const contact = {name: e.target.value};
+                const contact = { name: e.target.value };
                 this.setState({
-                  contact: Object.assign(this.state.contact,contact)
+                  contact: Object.assign(this.state.contact, contact)
                 });
               }} />
             </div>
             <div>
               Occupation: <input onChange={(e) => {
-                const contact = {occupation: e.target.value};
+                const contact = { occupation: e.target.value };
                 this.setState({
-                  contact: Object.assign(this.state.contact,contact)
+                  contact: Object.assign(this.state.contact, contact)
                 });
               }} />
             </div>
             <div>
               Avatar: <input onChange={(e) => {
-                const contact = {avatar: e.target.value};
+                const contact = { avatar: e.target.value };
                 this.setState({
-                  contact: Object.assign(this.state.contact,contact)
+                  contact: Object.assign(this.state.contact, contact)
                 });
               }} />
             </div>
@@ -90,25 +90,25 @@ class CreateThings extends React.Component {
           }}>
             <div>
               Year: <input onChange={(e) => {
-                const vehicle = {year: e.target.value};
+                const vehicle = { year: e.target.value };
                 this.setState({
-                  vehicle: Object.assign(this.state.vehicle,vehicle)
+                  vehicle: Object.assign(this.state.vehicle, vehicle)
                 });
               }} />
             </div>
             <div>
               Make: <input onChange={(e) => {
-                const vehicle = {make: e.target.value};
+                const vehicle = { make: e.target.value };
                 this.setState({
-                  vehicle: Object.assign(this.state.vehicle,vehicle)
+                  vehicle: Object.assign(this.state.vehicle, vehicle)
                 });
               }} />
             </div>
             <div>
               Model: <input onChange={(e) => {
-                const vehicle = {model: e.target.value};
+                const vehicle = { model: e.target.value };
                 this.setState({
-                  vehicle: Object.assign(this.state.vehicle,vehicle)
+                  vehicle: Object.assign(this.state.vehicle, vehicle)
                 });
               }} />
             </div>
@@ -125,25 +125,25 @@ class CreateThings extends React.Component {
           }}>
             <div>
               Name: <input onChange={(e) => {
-                const product = {name: e.target.value};
+                const product = { name: e.target.value };
                 this.setState({
-                  product: Object.assign(this.state.product,product)
+                  product: Object.assign(this.state.product, product)
                 });
               }} />
             </div>
             <div>
               Description: <input onChange={(e) => {
-                const product = {description: e.target.value};
+                const product = { description: e.target.value };
                 this.setState({
-                  product: Object.assign(this.state.product,product)
+                  product: Object.assign(this.state.product, product)
                 });
               }} />
             </div>
             <button>Create</button>
           </form>
-        </div>        
+        </div>
       </div>
-      
+
     );
   }
 }

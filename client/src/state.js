@@ -3,7 +3,7 @@ export default {
   comments: [],
   products: [],
   vehicles: [],
-  vehicle: {blah: ""},
+  vehicle: { blah: "" },
   comment: {},
   product: {},
   contact: {}

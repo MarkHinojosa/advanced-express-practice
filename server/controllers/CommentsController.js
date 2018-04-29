@@ -1,17 +1,27 @@
-import comments from "../comments.js";
+import Comment from "../models/CommentModel.js";
 
 export function list(request, response) {
-  return response.json(comments);
+  Comment.find({}).exec().then(cont => {
+    return response.json(cont);
+  })
 }
 export function show(request, response) {
-  return response.json(comments.find(comment => comment._id == request.params.id));
+  Comment.findById(request.params.id).exec().then(com => {
+    return response.json(com);
+  })
 }
 export function create(request, response) {
-  comments.push(request.body);
-  return response.json(comments);
+  const comment = new Comment({
+    body: request.body.body
+  });
+
+  comment.save().then(comm => {
+    return response.json(comm);
+  });
 }
+
 export function update(request, response) {
-  return response.json({ theId: request.params.id });
+  return response.json();
 }
 export function remove(request, response) {
   comments.splice(comments.indexOf(comments.find(com => com._id == request.params.id)), 1);

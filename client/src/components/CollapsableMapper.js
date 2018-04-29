@@ -4,14 +4,14 @@ import Link from "react-router-dom";
 class CollapsableMapper extends Component {
   constructor() {
     super();
-    this.state = {visible: true};
+    this.state = { visible: true };
   }
   render() {
     let buttonText = "Hide";
     let userDivs = "";
     if (this.state.visible) {
       buttonText = "Hide";
-      userDivs = this.props.data.map((d,i) => {
+      userDivs = this.props.data.map((d, i) => {
         return (
           <div key={i}>
             {d[this.props.field]}
